@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun Ayu Budi 🎉</title>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffb6c1; /* Warna pink lembut */
+      color: #fff;
+      overflow: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: rgba(255, 105, 180, 0.6);
+      z-index: 1000;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin: 0;
+      color: #fff;
+    }
+    .typed-text {
+      font-size: 1em;
+      font-weight: bold;
+      color: #fff;
+    }
+    .slider {
+      display: flex;
+      height: 100vh;
+      /* Use viewport width so translateX using vw aligns slides correctly */
+      width: 300vw; /* 3 slides */
+      transition: transform 0.8s ease-in-out;
+      will-change: transform;
+    }
+    .section {
+      /* Ensure each section occupies the full viewport width */
+      flex: 0 0 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .section img {
+      /* Make images responsive and preserve aspect ratio */
+      max-width: 90%;
+      max-height: 70vh;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .caption {
+      margin-top: 15px;
+      font-size: 1.3em;
+      line-height: 1.4em;
+      color: #fff;
+      max-width: 80%;
+      background: rgba(0,0,0,0.3);
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+    .icons {
+      position: fixed;
+      right: 20px;
+      bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 1000;
+    }
+    .icons i {
+      font-size: 35px;
+      color: #ff1493;
+      cursor: pointer;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .icons i:hover {
+      transform: scale(1.2);
+      color: #fff;
+    }
+    footer {
+      padding: 20px;
+      background: rgba(255, 105, 180, 0.6);
+      text-align: center;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      position: relative;
+      z-index: 1000;
+    }
+    footer p {
+      margin: 0;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎂 Selamat Ulang Tahun Ayu Budi 🎉</h1>
+    <div class="typed-text"></div>
+  </header>
+
+  <div class="slider" id="slider">
+    <section class="section" id="img1">
+      <img src="WhatsApp%20Image%202025-10-03%20at%2021.03.34_eab6a95b.jpg" alt="Ayu Graduation">
+      <div class="caption">🎓 Semoga sukses dalam setiap langkah pendidikan dan kariermu!</div>
+    </section>
+
+    <section class="section" id="img2">
+      <img src="WhatsApp%20Image%202025-10-03%20at%2021.49.16_eccbca10.jpg" alt="Ayu Beach">
+      <div class="caption">🌊 Semoga hidupmu selalu tenang dan indah seperti lautan.</div>
+    </section>
+
+    <section class="section" id="img3">
+      <img src="WhatsApp%20Image%202025-10-03%20at%2021.49.16_7f840a1e.jpg" alt="Ayu Mountain">
+      <div class="caption">⛰️ Semoga selalu kuat dan tegar menghadapi tantangan hidup.</div>
+    </section>
+  </div>
+
+  <div class="icons">
+    <i class="fa-solid fa-cake-candles" onclick="goToSlide(0)" title="Happy Birthday!"></i>
+    <i class="fa-solid fa-gift" onclick="goToSlide(1)" title="Banyak Hadiah"></i>
+    <i class="fa-solid fa-heart" onclick="goToSlide(2)" title="Semoga Bahagia"></i>
+  </div>
+
+  <footer>
+    <p>✨ Dengan cinta dari teman-temanmu, semoga Ayu Budi selalu sehat, bahagia, dan sukses. Dari Bali untuk dunia! 🌺</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed('.typed-text', {
+      strings: [
+        "Selamat ulang tahun, Ayu! 🥳",
+        "Semoga panjang umur dan sehat selalu! 💖",
+        "Sukses terus untuk Ayu Budi dari Bali! 🌸"
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+
+    let currentSlide = 0;
+    function goToSlide(n) {
+      const slider = document.getElementById('slider');
+      currentSlide = n;
+      slider.style.transform = `translateX(-${n * 100}vw)`;
+    }
+  </script>
+</body>
+</html>
